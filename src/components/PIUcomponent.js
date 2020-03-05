@@ -1,8 +1,22 @@
 import React, { component, Component } from 'react';
 
 class PIUComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            clickCount: 0
+        }
+
+    }
+    handleClick = () => {
+        this.setState({
+            clickCount: this.state.clickCount + 1
+        })
+    }
     render() {
-        return (<div></div>)
+        return (<div>
+            <button onClick={this.handleClick}>Birthday </button>
+        </div>)
     }
 }
 
